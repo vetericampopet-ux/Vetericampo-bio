@@ -1,247 +1,197 @@
-// index.html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vetericampo - Equipe</title>
-    <!-- Link para Google Fonts (Inter) -->
+    <title>Equipe Vetericampo</title>
+    <!-- Link para a fonte Inter do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <!-- Link para Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Estilos globais */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #228B22, #4169E1);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        /* Cabeçalho */
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        h2 {
+            font-size: 1.2em;
+            margin: 10px 0 0 0;
+            font-weight: 400;
+        }
+        /* Grid de consultores */
+        .consultores {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-grow: 1;
+        }
+        /* Card glassmorphism */
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .card h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.2em;
+        }
+        /* Botões */
+        .botoes {
+            display: flex;
+            justify-content: space-around;
+            gap: 10px;
+        }
+        .botao {
+            background: white;
+            color: #228B22;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: box-shadow 0.3s ease;
+        }
+        .botao:hover {
+            box-shadow: 0 0 10px rgba(34, 139, 34, 0.5);
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        /* Responsividade mobile-first */
+        @media (min-width: 600px) {
+            .consultores {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Cabeçalho com título e subtítulo -->
     <header>
         <h1>Equipe Vetericampo</h1>
-        <nav>
-            <button id="menu-toggle" class="menu-toggle"><i class="fas fa-bars"></i></button>
-            <ul id="menu" class="menu">
-                <li><a href="#equipe">Equipe</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+        <h2>Distribuidora Agropet 40 anos Campina Grande PB Zoetis HebronVet</h2>
     </header>
-    <main>
-        <section id="equipe" class="equipe">
-            <!-- Placeholders para 8 consultores -->
-            <div class="card">
-                <img src="placeholder.jpg" alt="Consultor 1" class="card-img">
-                <h3>Consultor 1</h3>
-                <p>Especialista em veterinária.</p>
-                <a href="https://wa.me/5511999999999" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Contatar</a>
+    <!-- Seção de consultores -->
+    <section class="consultores">
+        <!-- Card para Diogo Andrade -->
+        <div class="card">
+            <img src="https://source.unsplash.com/100x100/?person" alt="Foto de Diogo Andrade">
+            <h3>Diogo Andrade</h3>
+            <p>Sertão-PB</p>
+            <div class="botoes">
+                <a href="https://wa.me/558398513696" class="botao"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="tel:+558398513696" class="botao"><i class="fas fa-phone"></i> Ligar</a>
             </div>
-            <div class="card">
-                <img src="placeholder.jpg" alt="Consultor 2" class="card-img">
-                <h3>Consultor 2</h3>
-                <p>Especialista em veterinária.</p>
-                <a href="https://wa.me/5511999999999" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Contatar</a>
+        </div>
+        <!-- Card para Adelia Martins -->
+        <div class="card">
+            <img src="https://source.unsplash.com/100x100/?person" alt="Foto de Adelia Martins">
+            <h3>Adelia Martins</h3>
+            <p>Sertão Cariri-PB</p>
+            <div class="botoes">
+                <a href="https://wa.me/558398228438" class="botao"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="tel:+558398228438" class="botao"><i class="fas fa-phone"></i> Ligar</a>
             </div>
-            <div class="card">
-                <img src="placeholder.jpg" alt="Consultor 3" class="card-img">
-                <h3>Consultor 3</h3>
-                <p>Especialista em veterinária.</p>
-                <a href="https://wa.me/5511999999999" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Contatar</a>
+        </div>
+        <!-- Card para Luana França -->
+        <div class="card">
+            <img src="https://source.unsplash.com/100x100/?person" alt="Foto de Luana França">
+            <h3>Luana França</h3>
+            <p>Campina Brejo-PB</p>
+            <div class="botoes">
+                <a href="https://wa.me/5583987507802" class="botao"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="tel:+5583987507802" class="botao"><i class="fas fa-phone"></i> Ligar</a>
             </div>
-            <div class="card">
-                <img src="placeholder.jpg" alt="Consultor 4" class="card-img">
-                <h3>Consultor 4</h3>
-                <p>Especialista em veterinária.</p>
-                <a href="https://wa.me/5511999999999" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Contatar</a>
+        </div>
+        <!-- Card para Michelle Becker -->
+        <div class="card">
+            <img src="https://source.unsplash.com/100x100/?person" alt="Foto de Michelle Becker">
+            <h3>Michelle Becker</h3>
+            <p>Sertão-PB</p>
+            <div class="botoes">
+                <a href="https://wa.me/5583996043764" class="botao"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="tel:+5583996043764" class="botao"><i class="fas fa-phone"></i> Ligar</a>
             </div>
-            <div class="card">
-                <img src="placeholder.jpg" alt="Consultor 5" class="card-img">
-                <h3>Consultor 5</h3>
-                <p>Especialista em veterinária.</p>
-                <a href="https://wa.me/5511999999999" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Contatar</a>
+        </div>
+        <!-- Card para Nalu -->
+        <div class="card">
+            <img src="https://source.unsplash.com/100x100/?person" alt="Foto de Nalu">
+            <h3>Nalu</h3>
+            <p>João Pessoa Praia-PB</p>
+            <div class="botoes">
+                <a href="https://wa.me/5583999913189" class="botao"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="tel:+5583999913189" class="botao"><i class="fas fa-phone"></i> Ligar</a>
             </div>
-            <div class="card">
-                <img src="placeholder.jpg" alt="Consultor 6" class="card-img">
-                <h3>Consultor 6</h3>
-                <p>Especialista em veterinária.</p>
-                <a href="https://wa.me/5511999999999" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Contatar</a>
+        </div>
+        <!-- Card para Tayná -->
+        <div class="card">
+            <img src="https://source.unsplash.com/100x100/?person" alt="Foto de Tayná">
+            <h3>Tayná</h3>
+            <p>João Pessoa Região</p>
+            <div class="botoes">
+                <a href="https://wa.me/5583982005330" class="botao"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="tel:+5583982005330" class="botao"><i class="fas fa-phone"></i> Ligar</a>
             </div>
-            <div class="card">
-                <img src="placeholder.jpg" alt="Consultor 7" class="card-img">
-                <h3>Consultor 7</h3>
-                <p>Especialista em veterinária.</p>
-                <a href="https://wa.me/5511999999999" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Contatar</a>
+        </div>
+        <!-- Card para João Vitor -->
+        <div class="card">
+            <img src="https://source.unsplash.com/100x100/?person" alt="Foto de João Vitor">
+            <h3>João Vitor</h3>
+            <p>Campina-PB</p>
+            <div class="botoes">
+                <a href="https://wa.me/5583996494505" class="botao"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="tel:+5583996494505" class="botao"><i class="fas fa-phone"></i> Ligar</a>
             </div>
-            <div class="card">
-                <img src="placeholder.jpg" alt="Consultor 8" class="card-img">
-                <h3>Consultor 8</h3>
-                <p>Especialista em veterinária.</p>
-                <a href="https://wa.me/5511999999999" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Contatar</a>
+        </div>
+        <!-- Card para Kleberson -->
+        <div class="card">
+            <img src="https://source.unsplash.com/100x100/?person" alt="Foto de Kleberson">
+            <h3>Kleberson</h3>
+            <p>Brejo Curimataú-PB</p>
+            <div class="botoes">
+                <a href="https://wa.me/5584988420464" class="botao"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="tel:+5584988420464" class="botao"><i class="fas fa-phone"></i> Ligar</a>
             </div>
-        </section>
-    </main>
-    <footer id="contato">
-        <p>Siga-nos no Instagram: <a href="https://instagram.com/vetericampopet" target="_blank">@vetericampopet</a></p>
+        </div>
+    </section>
+    <!-- Rodapé -->
+    <footer>
+        <p>Rua Exemplo 123 Campina Grande PB @vetericampopet</p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
-
-// style.css
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Corpo com gradiente de fundo */
-body {
-    font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #228B22, #4169E1);
-    color: #fff;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background: rgba(0, 0, 0, 0.2);
-}
-
-header h1 {
-    font-size: 1.5rem;
-}
-
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-.menu {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-}
-
-.menu a {
-    color: #fff;
-    text-decoration: none;
-}
-
-/* Seção equipe */
-.equipe {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
-    flex-grow: 1;
-}
-
-/* Cards com glassmorphism */
-.card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: 1rem;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 0.5rem;
-}
-
-/* Botões WhatsApp brancos */
-.btn-whatsapp {
-    display: inline-block;
-    background: #fff;
-    color: #228B22;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background 0.3s ease;
-}
-
-.btn-whatsapp:hover {
-    background: #f0f0f0;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background: rgba(0, 0, 0, 0.2);
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-}
-
-/* Responsividade mobile-first */
-@media (max-width: 768px) {
-    .menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        padding: 1rem;
-    }
-
-    .menu.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .equipe {
-        grid-template-columns: 1fr;
-    }
-}
-
-// script.js
-// Script simples para toggle do menu mobile e smooth scroll
-document.addEventListener('DOMContentLoaded', function() {
-    // Toggle menu mobile
-    const menuToggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
-
-    menuToggle.addEventListener('click', function() {
-        menu.classList.toggle('active');
-    });
-
-    // Smooth scroll para links internos
-    const links = document.querySelectorAll('a[href^="#"]');
-    links.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-            // Fecha menu mobile após clique
-            menu.classList.remove('active');
-        });
-    });
-});
